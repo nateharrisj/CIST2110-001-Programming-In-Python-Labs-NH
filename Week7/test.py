@@ -1,9 +1,9 @@
-# test.py
+test.py
 
 # Import the pytest library
 import pytest
 # As you add functions to Lab6.py, import them here (uncomment the lines)
-# from Lab6 import calculate_rectangle_area
+from Lab6 import calculate_rectangle_area
 # from Lab6 import calculate_hypotenuse
 # from Lab6 import is_even
 # from Lab6 import find_maximum
@@ -19,7 +19,7 @@ def test_rectangle_area():
     assert calculate_rectangle_area(10, 20) == 200
 
 # Test cases for the Pythagorean theorem
-def test_pythagorean_theorem():
+def test_calculate_hypotenuse():
     assert calculate_hypotenuse(3, 4) == 5
     assert calculate_hypotenuse(5, 12) == 13
     assert calculate_hypotenuse(7, 24) == 25
