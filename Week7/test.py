@@ -1,13 +1,13 @@
-test.py
+#test.py
 
 # Import the pytest library
 import pytest
 # As you add functions to Lab6.py, import them here (uncomment the lines)
 from Lab6 import calculate_rectangle_area
-# from Lab6 import calculate_hypotenuse
-# from Lab6 import is_even
-# from Lab6 import find_maximum
-# from Lab6 import grade_calculator
+from Lab6 import calculate_hypotenuse
+from Lab6 import is_even
+from Lab6 import find_maximum
+from Lab6 import grade_calculator
 
 # Example test cases
 
