@@ -1,5 +1,5 @@
 #Lab 9
-# Author:
+# Author: Nate Harris
 
 """_summary_
 
@@ -80,7 +80,7 @@ def app():
 
 
 # 9. Run the web application by typing streamlit run Lab9.py in the terminal.
-# 10. Enter a date in the format of YYYY-MM-DD and click the button.
+# 10. Enter a date in the format of YYYY-MM-DD and click the button. I change the format to MM-DD-YYY
 # 11. Check to see if the number of days until the date entered is correct.
 # 12. If the number of days is correct, then you have completed the lab.
 # 13. If the number of days is incorrect, then you will need to debug your code.
