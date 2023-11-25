@@ -1,5 +1,5 @@
 # Lab 10
-# Author:
+# Author: Nate Harris
 
 # Lab 10 will show demonstrate how Dictionary's work in Python.
 
@@ -9,25 +9,39 @@
 # Key: "city", Value: "Trenton"
 # Key: "state", Value: "New Jersey"
 
+my_dict = {"name": "John", "age": 30, "city": "Trenton", "state": "New Jersey"}   
 
 # 2. Print out the dictionary.
+print(my_dict)
 
 
 # 3. Print out the value for the key "name".
+print(my_dict["name"])
 
 # 4. Lookup the key associated with the value "New Jersey" and print it out.
 # Hint 1: You will need to loop through the dictionary.
 # Hint 2: remember you can use the .items() method to get the key and value.
 
+for key, value in my_dict.items():
+    if value == "New Jersey":
+        print(key)
+
 # 5. Add a new key value pair to the dictionary.
 # Key: "country", Value: "USA"
 
+my_dict["country"] = "USA"
 
 # 6. Print out the dictionary.
 
+print(my_dict)
+
 # 7. Remove the key value pair with the key "city".
 
-# 8. Print out the dictionary.
+del my_dict["city"] 
+
+# 8. Print out the dictionary. 
+
+print(my_dict)
 
 # 9. Create a dictionary called cities with an key as the City name and values as a list that contains the state, population, and country.
 # use the following data:
@@ -41,8 +55,15 @@
 # San Antonio, Texas, 1,547,253, USA
 # San Diego, California, 1,423,851, USA
 
+cities = {"Trenton": ["New Jersey", 84913, "USA"], "New York City": ["New York", 8336817, "USA"], "Los Angeles": ["California", 3979576, "USA"],
+        "Chicago": ["Illinois", 2693976, "USA"], "Houston": ["Texas", 2320268, "USA"], "Phoenix": ["Arizona", 1680992, "USA"], 
+        "Philadelphia": ["Pennsylvania", 1584138, "USA"], "San Antonio": ["Texas", 1547253, "USA"], "San Diego": ["California", 1423851, "USA"]}
+
 # 10. Print a table of the data using the pandas library.
 # pip install pandas
+
+import pandas as pd
+print(pd.DataFrame.from_dict(cities, orient='index', columns=["State", "Population", "Country"]))
 
 
 # 11. Use the tabulate library to print out the table.

@@ -22,10 +22,12 @@ sl.title("Date Counter")
 
 # 4. Create a subheader for your web application. Streamlit has a function for this called subheader
 
+sl.subheader("Enter a date to calculate the number of days until that date")
+
 # 5. Create a date input for the user to enter a date. Streamlit has a function for this called date_input
 # Make sure to save the input into a variable
 
-date = sl.date_input("Enter a date: ")
+date = sl.date_input("Enter a date: ", format="MM/DD/YYYY" )
 
 # 6. Create a button for the user to click. Streamlit has a function for this called button
 # Make sure to save the button click into a variable
