@@ -2,6 +2,7 @@
 # Author: Nate Harris
 
 # Lab 10 will show demonstrate how Dictionary's work in Python.
+
 import pandas as pd
 from tabulate import tabulate
 
