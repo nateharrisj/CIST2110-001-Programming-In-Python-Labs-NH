@@ -44,9 +44,7 @@ my_dict.pop("city")
 
 # 8. Print out the dictionary.
 
-print(my_dict)
-
-# 9. Create a dictionary called cities with an key as the City name and values as a dictionary that contains the state, population, and country.
+# 9. Create a dictionary called cities with an key as the City name and values as a list that contains the state, population, and country.
 # use the following data:
 # Trenton, New Jersey, 84,913, USA
 # New York City, New York, 8,336,817, USA
@@ -83,10 +81,7 @@ print("\n", col_row_table)
 
 # 12. Print out the population for the city of Chicago.
 
-print("\n The population if Chicago is: ", df.at["Chicago", "Population"])
-#print("\n", df.loc["Chicago", "Population"])
-#print(cities["Chicago"].get("Population"))
-# I played around with different ways to get the population, I liked the first one the best.
+# 11. Print out the population for the city of Chicago.
 
 
 # 13. **Extra** An alternative to converting a dictionary into a pandas df then tabulate, you can use dictionary unpacking and tabulate.
@@ -106,13 +101,7 @@ new_cities = [{"City": city, **info} for city, info in cities.items()]
 
 print("\n", tabulate(new_cities, headers="keys", tablefmt="psql"))
 
-# 14. How many cities have a population greater than 1 million? Use a for loop to iterate through the dictionary.
-
-count_cities = 0
-for city in cities:
-    if cities[city]["Population"] > 1000000:
-        count_cities += 1
-print("\n"f"Cities with a population greater than 1 million: {count_cities}")
+# 12. How many cities have a population greater than 1 million? Use a for loop to iterate through the dictionary.
 
 # 15.  How many cities are in the USA? Use .items() to get a list of tuples. Use a for loop to iterate through the list of tuples.
 # Hint 1: You will need to use the second item in the tuple. The second item is a dictionary. IE. for city, info in cities.items():
