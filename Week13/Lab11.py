@@ -3,25 +3,34 @@
 
 # Lab 11 will show basic understanding of Object Oriented Programming in Python.
 
-import tabulate
-
+from tabulate import tabulate
 
 # 1. Create a class called Product. The class should have the following attributes in the __init__ method:
 # name -> this should be a string
 # price -> this should be a float
 # product_id (this should be a unique number)
 
-Class Product:
+class Product:
     def __init__(self, name: str, price: float, product_id: int):
+        """
+        Create a Product object with the following attributes:
+        name -> this should be a string
+        price -> this should be a float
+        product_id (this should be a unique number)
+        """
         self.name = name
         self.price = price
-        self.product_id = product_id    
+        self.product_id = product_id  
 
 # 2. Create a method called __str__ that returns a string with the following format:
 # Product: <name>, Price: <price>, ID: <product_id>
 # Hint: use f-strings to format the string.
 
     def __str__(self):
+        """
+        Return a string using the __str__ method with the following format:
+        Product: <name>, Price: <price>, ID: <product_id>
+        """
         return f'Product: {self.name}, Price: {self.price}, ID: {self.product_id}'
 
 
@@ -31,9 +40,14 @@ Class Product:
 # customer_id (this should be a unique number)
 # cart -> this should be a list that contains Product objects.
 
-Class Customer:
-
+class Customer:
     def __init__(self, name: str, customer_id: int):
+        """
+        Create a Customer object with the following attributes:
+        name -> this should be a string
+        customer_id (this should be a unique number)
+        cart -> this should be a list that contains Product objects.
+        """
         self.name = name
         self.customer_id = customer_id
         self.cart = []
@@ -47,77 +61,76 @@ Class Customer:
 
 # 4. Create a method called add_to_cart that takes in a Product object and adds it to the cart list. print out the product that was added and the customer's name.
 
-def add_to_cart(self, Product):
-    self.cart.append(Product)
-    print(f'{Product} was added to {self.name}\'s cart')
+    def add_to_cart(self, Product):
+        self.cart.append(Product)
+        print(f'{Product} was added to {self.name}\'s cart')
 
 # 5. Create a method called remove_from_cart that takes in a Product object and removes it from the cart list.
 
-def remove_from_cart(self, Product):
-    self.cart.remove(Product)
-    print(f'{Product} was removed from {self.name}\'s cart')
+    def remove_from_cart(self, Product):
+        self.cart.remove(Product)
+        print(f'{Product} was removed from {self.name}\'s cart')
 
 # 6. Create a method called checkout calculates the total price of all the products in the cart and prints out the total. After printing out the total, empty the cart.
 # Hint: you will need to loop through the cart and add up the prices.
 
-def checkout(self):
-    total = 0
-    for product in self.cart:
-        total += product.price
-    print(f'Total: {total}')
-    self.cart = []
+    def checkout(self):
+        total = 0
+        for product in self.cart:
+            total += product.price
+        print(f'{self.name}\'s Total: {total}')
+        self.cart = ["Empty"]
 
 # 7. Create a method called display_products that prints out all the products in the cart list.
 
-def display_products(self):
-    print(f'{self.name}\'s cart:')
-    for product in self.cart:
-        print(product)
+    def display_products(self):
+        print(f'{self.name}\'s cart:')
+        for product in self.cart:
+            print(product)
 
 # 8. **Extra** Create a method called display_products_pretty that prints out all the products in the cart list. (use the tabulate library)
 # Make a nice table table using the tabulate library.
 
-def display_products_pretty(self):
-    table = []
-    for product in self.cart:
-        table.append([product.name, product.price, product.product_id])
-    print(tabulate(table, headers=['Name', 'Price', 'ID']))
+    def display_products_pretty(self):
+        print(f'{self.name}\'s cart:')
+        table = [[product.name, product.price, product.product_id] for product in self.cart]
+        print(tabulate(table, headers=['Name', 'Price', 'ID'], tablefmt='rounded_outline'))
 
 # 7. Create a class called Store. The class should have the following attributes in the __init__ method:
 # products -> this should be a list that contains Product objects.
 # customers -> this should be a list that contains Customer objects.
 
-Class Store:
+class Store:
     def __init__(self):
         self.products = []
         self.customers = []
 
 # 8. Create a method called add_product that takes in a Product object and adds it to the products list.
 
-def add_product(self, product: Product):
-    self.products.append(Product)
-    print(f'{Product} was added to the store')
+    def add_product(self, product: Product):
+        self.products.append(product)
+        print(f'{product} was added to the store')
 
 
 # 9. Create a method called add_customer that takes in a Customer object and adds it to the customers list.
 
-def add_customer(self, customer: Customer):
-    self.customers.append(Customer)
-    print(f'{Customer} was added to the store')
+    def add_customer(self, customer: Customer):
+        self.customers.append(customer)
+        print(f'{customer} was added to the store')
 
 # 10. Create a method called display_products that prints out all the products in the products list.
 
-def display_products(self):
-    print('Products in store:')
-    for product in self.products:
-        print(product)
+    def display_products(self):
+        print('Products in store:')
+        for product in self.products:
+            print(product)
 
 # 11. Create a method called display_customers that prints out all the customers in the customers list.
 
-def display_customers(self):
-    print('Customers in store:')
-    for customer in self.customers:
-        print(customer)
+    def display_customers(self):
+        print('Customers in store:')
+        for customer in self.customers:
+            print(customer)
 
 # Typically we would create another file and import the classes we created. For this lab, we will just create the objects in this file to show how its possible.
 
